@@ -1,13 +1,12 @@
 public class Arreglos {
     public static void main(String[] args) {
-        // Arreglos
-        // 1. Declaramos un arreglo
-        int[] enteros;
-        // 2. Inicializar el arreglo
-        enteros = new int[3];
-        // Declarar e inicializar un arreglo
-        // int[] numeros = new int[2];
-        var numeros = new int[2];
+        // Arreglo
+        var enteros = new int[5];
+
+        // Modificar los elementos
+        enteros[0] = 13;
+        enteros[1] = 21;
+        enteros[4] = 62;
     }
 }
 
@@ -19,4 +18,5 @@ public class Arreglos {
  * En memoria se crea una variable arreglo que puede apuntar a varios valores
  * Cada casilla del arreglo tienen asignadas un índice que puedes gestionar en los cuales puede almacenar variables del tipo asignado en la inicialización (por el momento se guardan el valor default de la variable (o sea 0 en el caso del int))
  * Recordemos que, por ejemplo, asignamos un espacio de 5 casillas, el índice irá desde 0 hasta n-1 (ya que incluimos el 0 cómo índice)
+ * Recordemos que no podemos guardar valores fuera del rango de índices ya que nos saldría error de desbordamiento
  */
