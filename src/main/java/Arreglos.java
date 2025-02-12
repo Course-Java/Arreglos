@@ -1,15 +1,35 @@
+import java.util.Scanner;
+
 public class Arreglos {
     public static void main(String[] args) {
-        // Arreglo
-        //int[] enteros = {100, 200, 300, 400, 500};
-        var enteros = new int[]{100, 200, 300, 400, 500};
+        // Introducir valores a un arreglo
+        var consola = new Scanner(System.in);
 
-        for (var i = 0; i < enteros.length; i++) {
-            System.out.println("Valor " + (i + 1) + " : " + enteros[i]);
+        // Declarar el arreglo
+        System.out.print("Proporciona el largo del arreglo: ");
+        var largoArreglo = Integer.parseInt(consola.nextLine());
+
+        // Creamos de manera dinámica el arreglo
+        var enteros = new int[largoArreglo];
+
+        // Solicitar los valores del arreglo
+        for (var i = 0; i < largoArreglo; i++) {
+            System.out.print("Proporciona enteros[" + i + "] = ");
+            enteros[i] = Integer.parseInt(consola.nextLine());
         }
 
-        // Imprimir el arreglo -> nos da la dirección de memoria (ya que variable apunta a un arreglo que se encuentra en la memoria heap)
-        System.out.println("Imprimir el arreglo: " + enteros);
+        System.out.print("Tu arreglo es = [");
+
+        // Imprimir los valores del arreglo
+        for (var i = 0; i < largoArreglo; i++) {
+            if (i == largoArreglo - 1) {
+                System.out.print(enteros[i]);
+                break;
+            }
+            System.out.print(enteros[i] + ", ");
+        }
+
+        System.out.print("]");
     }
 }
 
